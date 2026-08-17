@@ -1,6 +1,6 @@
 /* ==========================================================================
    DM HOME IMPROVEMENT LLC — LUXURY BATHROOM REMODELING LANDING PAGE
-   REFINED SPECIFICATIONS: RED BRANDING CARDS & ABSOLUTE MOBILE HERO FIX
+   REFINED SPECIFICATIONS: RED HERO HIGHLIGHT & ROYAL BLUE OFFER CARD
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -321,6 +321,7 @@ button.btn-champagne-pearl {
 
 /* --------------------------------------------------------------------------
    HERO SECTION — LOWER-MIDDLE CENTER-ALIGNED
+   Word "BATHROOM." highlighted in Red!
    -------------------------------------------------------------------------- */
 .hero-luxury {
   position: relative;
@@ -415,6 +416,12 @@ button.btn-champagne-pearl {
   text-shadow: 0 4px 25px rgba(0, 0, 0, 0.9);
   text-align: center !important;
   white-space: nowrap !important;
+}
+
+/* HERO WORD "BATHROOM." IN BRAND RED */
+.hero-text-red {
+  color: #EF4444 !important;
+  text-shadow: 0 0 35px rgba(239, 68, 68, 0.75), 0 4px 25px rgba(0, 0, 0, 0.9) !important;
 }
 
 .hero-cta-wrap {
@@ -596,16 +603,27 @@ button.btn-champagne-pearl {
 }
 
 /* --------------------------------------------------------------------------
-   FREE DESIGN OFFER
+   FREE DESIGN OFFER (RESTORED ROYAL BLUE STYLING AS REQUESTED)
    -------------------------------------------------------------------------- */
 .offer-section {
   background-color: var(--bg-deep);
 }
 
-.offer-container-card {
+.royal-blue-card {
   padding: 3rem;
-  background: linear-gradient(145deg, #1C080C 0%, #0C0305 100%) !important;
-  border: 1px solid var(--red-border) !important;
+  background: linear-gradient(145deg, #0F1626 0%, #080C14 100%) !important;
+  border: 1px solid var(--border-hud) !important;
+}
+
+.pill-blue-gold {
+  background: rgba(214, 177, 90, 0.1) !important;
+  color: var(--gold-champagne) !important;
+  border: 1px solid var(--border-hud) !important;
+}
+
+.badge-gold {
+  background: var(--gold-champagne) !important;
+  color: #000 !important;
 }
 
 .offer-grid {
@@ -624,8 +642,6 @@ button.btn-champagne-pearl {
   top: 1rem;
   left: 1rem;
   z-index: 5;
-  background: var(--red-main) !important;
-  color: #FFF !important;
   font-family: var(--font-head);
   font-weight: 800;
   font-size: 0.75rem;
@@ -636,7 +652,7 @@ button.btn-champagne-pearl {
 .offer-image-wrap {
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid var(--red-border) !important;
+  border: 1px solid var(--border-hud) !important;
   aspect-ratio: 16 / 9;
 }
 
@@ -668,9 +684,9 @@ button.btn-champagne-pearl {
 }
 
 .toggle-btn.active, .toggle-btn:hover {
-  background: var(--red-main) !important;
-  color: #FFF !important;
-  border-color: var(--red-light) !important;
+  background: var(--gold-champagne) !important;
+  color: #000 !important;
+  border-color: var(--gold-champagne) !important;
 }
 
 .offer-title {
@@ -698,9 +714,9 @@ button.btn-champagne-pearl {
 .check-box {
   width: 28px;
   height: 28px;
-  background: rgba(220, 38, 38, 0.15) !important;
-  color: var(--red-light) !important;
-  border: 1px solid var(--red-light) !important;
+  background: rgba(214, 177, 90, 0.15) !important;
+  color: var(--gold-champagne) !important;
+  border: 1px solid var(--gold-champagne) !important;
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -1553,7 +1569,7 @@ button.btn-champagne-pearl {
   .offer-grid {
     grid-template-columns: 1fr;
   }
-  .offer-container-card {
+  .royal-blue-card {
     padding: 1.5rem;
   }
 }
@@ -1563,7 +1579,7 @@ button.btn-champagne-pearl {
   .hero-luxury {
     min-height: 100vh !important;
     min-height: 100dvh !important;
-    padding-bottom: 9rem !important; /* Lifts content up safely away from bottom edge */
+    padding-bottom: 9rem !important;
   }
 
   .hero-minimal-container {
