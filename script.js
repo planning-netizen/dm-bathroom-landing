@@ -205,16 +205,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------------------------------------
-     5. STICKY CTA BAR SCROLL TRIGGER (REFINED FOR MOBILE & DESKTOP)
+     5. STICKY CTA BAR SCROLL TRIGGER (STRICT NUMERIC THRESHOLD FIX)
      ------------------------------------------------------------------------ */
   const stickyCtaBar = document.getElementById('stickyCtaBar');
-  const heroSection = document.getElementById('hero');
 
-  if (stickyCtaBar && heroSection) {
+  if (stickyCtaBar) {
     function checkStickyBar() {
-      const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
-      const heroHeight = heroSection.offsetHeight;
-      if (scrollPosition > heroHeight * 0.65) {
+      const scrollPos = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+      // Require at least 450px of user scrolling before EVER revealing sticky bar
+      if (scrollPos > 450) {
         stickyCtaBar.classList.add('visible');
       } else {
         stickyCtaBar.classList.remove('visible');

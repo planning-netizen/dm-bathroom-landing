@@ -1,6 +1,6 @@
 /* ==========================================================================
    DM HOME IMPROVEMENT LLC — LUXURY BATHROOM REMODELING LANDING PAGE
-   REFINED SPECIFICATIONS: OPTIMIZED MOBILE LAYOUT & RESPONSIVE TYPOGRAPHY
+   REFINED SPECIFICATIONS: RED BRANDING CARDS & ABSOLUTE MOBILE HERO FIX
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -20,6 +20,15 @@
   --gold-light: #E2C784;
   --pearl-light: #F5ECE1;
   --gold-glow: rgba(214, 177, 90, 0.45);
+
+  /* DM HOME IMPROVEMENT BRAND RED PALETTE */
+  --red-main: #DC2626;
+  --red-light: #EF4444;
+  --red-dark: #991B1B;
+  --red-deep-bg: #1A070A;
+  --red-card-bg: linear-gradient(145deg, #1D080C 0%, #100305 100%);
+  --red-border: rgba(220, 38, 38, 0.4);
+  --red-glow: rgba(220, 38, 38, 0.35);
   
   --text-main: #F8FAFC;
   --text-muted: #94A3B8;
@@ -233,20 +242,23 @@ button.btn-champagne-pearl {
   width: 100% !important;
 }
 
-/* HUD Cards & Badges */
+/* --------------------------------------------------------------------------
+   BRAND RED LUXURY CARDS (PROBLEM CARDS & TRUST CARDS)
+   -------------------------------------------------------------------------- */
 .hud-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-card);
+  background: var(--red-card-bg) !important;
+  border: 1px solid var(--red-border) !important;
   border-radius: var(--radius-md);
   position: relative;
   overflow: hidden;
   transition: var(--transition);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
 .hud-card:hover {
-  border-color: var(--border-hud);
+  border-color: var(--red-light) !important;
   transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 15px rgba(214, 177, 90, 0.1);
+  box-shadow: 0 14px 35px rgba(185, 28, 28, 0.4), 0 0 20px rgba(220, 38, 38, 0.25) !important;
 }
 
 .card-corner-tl {
@@ -255,8 +267,8 @@ button.btn-champagne-pearl {
   left: 0;
   width: 10px;
   height: 10px;
-  border-top: 2px solid var(--gold-champagne);
-  border-left: 2px solid var(--gold-champagne);
+  border-top: 2px solid var(--red-light);
+  border-left: 2px solid var(--red-light);
 }
 
 .card-corner-br {
@@ -265,15 +277,15 @@ button.btn-champagne-pearl {
   right: 0;
   width: 10px;
   height: 10px;
-  border-bottom: 2px solid var(--gold-champagne);
-  border-right: 2px solid var(--gold-champagne);
+  border-bottom: 2px solid var(--red-light);
+  border-right: 2px solid var(--red-light);
 }
 
 .hud-pill {
   display: inline-block;
-  background: rgba(214, 177, 90, 0.1);
-  color: var(--gold-champagne);
-  border: 1px solid var(--border-hud);
+  background: rgba(220, 38, 38, 0.15) !important;
+  color: #F87171 !important;
+  border: 1px solid rgba(239, 68, 68, 0.4) !important;
   font-family: var(--font-head);
   font-weight: 700;
   font-size: 0.75rem;
@@ -317,7 +329,7 @@ button.btn-champagne-pearl {
   display: flex;
   align-items: flex-end !important;
   justify-content: center !important;
-  padding: 0 0 5.5rem 0 !important;
+  padding: 0 0 6.5rem 0 !important;
   margin: 0;
   overflow: hidden;
   text-align: center !important;
@@ -352,7 +364,7 @@ button.btn-champagne-pearl {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 48%;
+  height: 52%;
   z-index: 2;
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
@@ -413,7 +425,7 @@ button.btn-champagne-pearl {
 }
 
 /* --------------------------------------------------------------------------
-   PROBLEM CARDS
+   PROBLEM CARDS (RED BRANDING ENHANCED)
    -------------------------------------------------------------------------- */
 .problem-section {
   background-color: var(--bg-deep);
@@ -428,8 +440,8 @@ button.btn-champagne-pearl {
 .problem-icon-wrapper {
   width: 60px;
   height: 60px;
-  background: rgba(214, 177, 90, 0.1);
-  border: 1px solid var(--border-hud);
+  background: rgba(220, 38, 38, 0.15) !important;
+  border: 1px solid var(--red-border) !important;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -440,7 +452,7 @@ button.btn-champagne-pearl {
 .problem-icon {
   width: 28px;
   height: 28px;
-  stroke: var(--gold-champagne);
+  stroke: var(--red-light) !important;
 }
 
 .problem-card-title {
@@ -485,9 +497,9 @@ button.btn-champagne-pearl {
 }
 
 .pill-dark {
-  background: rgba(214, 177, 90, 0.18) !important;
-  color: #8A6D23 !important;
-  border: 1px solid rgba(214, 177, 90, 0.45) !important;
+  background: rgba(220, 38, 38, 0.12) !important;
+  color: #B91C1C !important;
+  border: 1px solid rgba(220, 38, 38, 0.35) !important;
 }
 
 .card-white {
@@ -592,7 +604,8 @@ button.btn-champagne-pearl {
 
 .offer-container-card {
   padding: 3rem;
-  background: linear-gradient(145deg, #0F1626 0%, #080C14 100%);
+  background: linear-gradient(145deg, #1C080C 0%, #0C0305 100%) !important;
+  border: 1px solid var(--red-border) !important;
 }
 
 .offer-grid {
@@ -611,8 +624,8 @@ button.btn-champagne-pearl {
   top: 1rem;
   left: 1rem;
   z-index: 5;
-  background: var(--gold-champagne);
-  color: #000;
+  background: var(--red-main) !important;
+  color: #FFF !important;
   font-family: var(--font-head);
   font-weight: 800;
   font-size: 0.75rem;
@@ -623,7 +636,7 @@ button.btn-champagne-pearl {
 .offer-image-wrap {
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1px solid var(--border-hud);
+  border: 1px solid var(--red-border) !important;
   aspect-ratio: 16 / 9;
 }
 
@@ -655,9 +668,9 @@ button.btn-champagne-pearl {
 }
 
 .toggle-btn.active, .toggle-btn:hover {
-  background: var(--gold-champagne);
-  color: #000;
-  border-color: var(--gold-champagne);
+  background: var(--red-main) !important;
+  color: #FFF !important;
+  border-color: var(--red-light) !important;
 }
 
 .offer-title {
@@ -685,9 +698,9 @@ button.btn-champagne-pearl {
 .check-box {
   width: 28px;
   height: 28px;
-  background: rgba(214, 177, 90, 0.15);
-  color: var(--gold-champagne);
-  border: 1px solid var(--gold-champagne);
+  background: rgba(220, 38, 38, 0.15) !important;
+  color: var(--red-light) !important;
+  border: 1px solid var(--red-light) !important;
   border-radius: 6px;
   display: flex;
   align-items: center;
@@ -708,7 +721,7 @@ button.btn-champagne-pearl {
 }
 
 /* --------------------------------------------------------------------------
-   TRUST & TESTIMONIALS
+   TRUST & TESTIMONIALS (RED BRANDING CARDS)
    -------------------------------------------------------------------------- */
 .trust-section {
   background-color: var(--bg-dark);
@@ -729,9 +742,9 @@ button.btn-champagne-pearl {
 .trust-check-icon {
   width: 44px;
   height: 44px;
-  background: rgba(214, 177, 90, 0.12);
-  color: var(--gold-champagne);
-  border: 1px solid var(--border-hud);
+  background: rgba(220, 38, 38, 0.15) !important;
+  color: var(--red-light) !important;
+  border: 1px solid var(--red-border) !important;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -757,13 +770,14 @@ button.btn-champagne-pearl {
   margin: 3.5rem auto 0;
   padding: 2.5rem;
   text-align: center;
-  background: linear-gradient(135deg, rgba(214,177,90,0.05) 0%, rgba(15,22,38,1) 100%);
+  background: linear-gradient(135deg, rgba(220,38,38,0.1) 0%, rgba(15,22,38,1) 100%) !important;
+  border: 1px solid var(--red-border) !important;
 }
 
 .testimonial-quote-mark {
   font-family: var(--font-head);
   font-size: 4rem;
-  color: var(--gold-champagne);
+  color: var(--red-light);
   line-height: 1;
   margin-bottom: -1rem;
 }
@@ -788,7 +802,7 @@ button.btn-champagne-pearl {
 }
 
 /* --------------------------------------------------------------------------
-   WHAT HAPPENS NEXT
+   WHAT HAPPENS NEXT (RED ACCENT NUMBER BADGES)
    -------------------------------------------------------------------------- */
 .next-section {
   background-color: var(--bg-deep);
@@ -801,8 +815,8 @@ button.btn-champagne-pearl {
 .next-step-num {
   width: 44px;
   height: 44px;
-  background: var(--gold-champagne);
-  color: #000;
+  background: var(--red-main) !important;
+  color: #FFF !important;
   font-family: var(--font-head);
   font-weight: 900;
   font-size: 1.25rem;
@@ -811,6 +825,7 @@ button.btn-champagne-pearl {
   align-items: center;
   justify-content: center;
   margin-bottom: 1.25rem;
+  box-shadow: 0 4px 15px rgba(220, 38, 38, 0.4);
 }
 
 .next-card-title {
@@ -904,7 +919,7 @@ button.btn-champagne-pearl {
 
 .footer-col-title {
   font-size: 0.95rem;
-  color: var(--gold-champagne);
+  color: var(--red-light);
   margin-bottom: 1rem;
 }
 
@@ -925,23 +940,30 @@ button.btn-champagne-pearl {
   font-size: 0.8rem;
 }
 
-/* STICKY BOTTOM MOBILE/DESKTOP CTA BAR */
+/* STICKY BOTTOM MOBILE/DESKTOP CTA BAR (FIXED INITIAL VISIBILITY) */
 .sticky-cta-bar {
   position: fixed;
-  bottom: -100px;
+  bottom: -120px;
   left: 0;
   right: 0;
-  z-index: 90;
-  background: rgba(10, 14, 26, 0.95);
-  backdrop-filter: blur(15px);
+  z-index: 99;
+  background: rgba(10, 14, 26, 0.96);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   border-top: 2px solid var(--gold-champagne);
   padding: 0.75rem 0;
-  transition: bottom 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.8);
+  transform: translateY(150px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, bottom 0.4s ease;
+  box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.9);
 }
 
 .sticky-cta-bar.visible {
-  bottom: 0;
+  bottom: 0 !important;
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 .sticky-bar-content {
@@ -954,8 +976,8 @@ button.btn-champagne-pearl {
 }
 
 .sticky-badge {
-  background: var(--gold-champagne);
-  color: #000;
+  background: var(--red-main);
+  color: #FFF;
   font-family: var(--font-head);
   font-weight: 800;
   font-size: 0.65rem;
@@ -1012,9 +1034,9 @@ button.btn-champagne-pearl {
   max-width: 760px;
   max-height: 90vh;
   overflow-y: auto;
-  border: 2px solid var(--border-hud);
+  border: 2px solid var(--red-border) !important;
   border-radius: var(--radius-lg);
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(214, 177, 90, 0.25);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(220, 38, 38, 0.25);
   background: #0A0E1A;
   animation: modalPopUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
@@ -1063,8 +1085,8 @@ button.btn-champagne-pearl {
   position: absolute;
   top: 0;
   right: 0;
-  background: var(--gold-champagne);
-  color: #000;
+  background: var(--red-main);
+  color: #FFF;
   font-family: var(--font-head);
   font-weight: 900;
   font-size: 0.7rem;
@@ -1083,7 +1105,7 @@ button.btn-champagne-pearl {
   font-family: var(--font-head);
   font-size: 0.75rem;
   font-weight: 800;
-  color: var(--gold-champagne);
+  color: var(--red-light);
   letter-spacing: 0.1em;
   margin-bottom: 0.5rem;
 }
@@ -1098,7 +1120,7 @@ button.btn-champagne-pearl {
 
 .quiz-progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #E2C784 0%, #D6B15A 100%);
+  background: linear-gradient(90deg, #EF4444 0%, #DC2626 100%);
   border-radius: 50px;
   transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -1161,15 +1183,15 @@ button.btn-champagne-pearl {
 }
 
 .quiz-option-card:hover {
-  border-color: var(--gold-champagne);
-  background: rgba(15, 22, 38, 0.9);
+  border-color: var(--red-light);
+  background: rgba(29, 8, 12, 0.9);
   transform: translateY(-2px);
 }
 
 .quiz-option-card.selected {
-  border-color: var(--gold-champagne);
-  background: linear-gradient(135deg, rgba(214, 177, 90, 0.15) 0%, rgba(15, 22, 38, 0.95) 100%);
-  box-shadow: 0 0 15px rgba(214, 177, 90, 0.2);
+  border-color: var(--red-light);
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(15, 22, 38, 0.95) 100%);
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.25);
 }
 
 .option-content {
@@ -1192,7 +1214,7 @@ button.btn-champagne-pearl {
 }
 
 .option-icon {
-  color: var(--gold-champagne);
+  color: var(--red-light);
   font-size: 1rem;
   font-weight: bold;
 }
@@ -1208,13 +1230,13 @@ button.btn-champagne-pearl {
 }
 
 .quiz-checkbox-card:hover {
-  border-color: var(--gold-champagne);
-  background: rgba(15, 22, 38, 0.9);
+  border-color: var(--red-light);
+  background: rgba(29, 8, 12, 0.9);
 }
 
 .quiz-checkbox-card.selected {
-  border-color: var(--gold-champagne);
-  background: rgba(214, 177, 90, 0.15);
+  border-color: var(--red-light);
+  background: rgba(220, 38, 38, 0.2);
 }
 
 .checkbox-content {
@@ -1238,9 +1260,9 @@ button.btn-champagne-pearl {
 }
 
 .quiz-checkbox-card.selected .checkbox-box {
-  background: var(--gold-champagne);
-  border-color: var(--gold-champagne);
-  color: #000;
+  background: var(--red-main);
+  border-color: var(--red-main);
+  color: #FFF;
 }
 
 .checkbox-label {
@@ -1255,14 +1277,14 @@ button.btn-champagne-pearl {
 }
 
 .summary-badge-box {
-  background: rgba(214, 177, 90, 0.1);
-  border: 1px solid var(--border-hud);
+  background: rgba(220, 38, 38, 0.15);
+  border: 1px solid var(--red-border);
   padding: 0.75rem 1rem;
   border-radius: var(--radius-md);
   font-family: var(--font-head);
   font-weight: 800;
   font-size: 0.8rem;
-  color: var(--gold-champagne);
+  color: var(--red-light);
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
@@ -1273,8 +1295,8 @@ button.btn-champagne-pearl {
 .check-badge {
   width: 18px;
   height: 18px;
-  background: var(--gold-champagne);
-  color: #000;
+  background: var(--red-main);
+  color: #FFF;
   border-radius: 50%;
   display: inline-flex;
   align-items: center;
@@ -1297,7 +1319,7 @@ button.btn-champagne-pearl {
 }
 
 .required {
-  color: var(--gold-champagne);
+  color: var(--red-light);
 }
 
 .form-input {
@@ -1314,8 +1336,8 @@ button.btn-champagne-pearl {
 }
 
 .form-input:focus {
-  border-color: var(--gold-champagne);
-  box-shadow: 0 0 15px rgba(214, 177, 90, 0.3);
+  border-color: var(--red-light);
+  box-shadow: 0 0 15px rgba(220, 38, 38, 0.3);
   background: #0A0E1A;
 }
 
@@ -1358,7 +1380,7 @@ button.btn-champagne-pearl {
 }
 
 .btn-quiz-back:hover {
-  color: var(--gold-champagne);
+  color: var(--red-light);
   text-decoration: underline;
 }
 
@@ -1521,7 +1543,7 @@ button.btn-champagne-pearl {
 }
 
 /* --------------------------------------------------------------------------
-   RESPONSIVE MEDIA QUERIES (OPTIMIZED MOBILE VIEW)
+   RESPONSIVE MEDIA QUERIES (OPTIMIZED MOBILE VIEW & HERO SPACING)
    -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .hero-luxury-title {
@@ -1537,11 +1559,11 @@ button.btn-champagne-pearl {
 }
 
 @media (max-width: 768px) {
-  /* Hero Dynamic Viewport & Spacing */
+  /* Hero Viewport & Clean Center/Bottom Offset */
   .hero-luxury {
     min-height: 100vh !important;
     min-height: 100dvh !important;
-    padding-bottom: 7rem !important; /* Lifts content up from mobile bottom bar */
+    padding-bottom: 9rem !important; /* Lifts content up safely away from bottom edge */
   }
 
   .hero-minimal-container {
@@ -1549,27 +1571,27 @@ button.btn-champagne-pearl {
   }
 
   .hero-cursive-accent {
-    font-size: 2.6rem !important;
+    font-size: 2.5rem !important;
     margin-bottom: 0.5rem !important;
   }
 
   .hero-luxury-title {
-    font-size: 2.1rem !important;
+    font-size: 2rem !important;
     white-space: normal !important;
     line-height: 1.12 !important;
-    margin-bottom: 1.75rem !important;
+    margin-bottom: 1.5rem !important;
   }
 
   .btn,
   .btn-champagne-pearl {
-    padding: 0.95rem 2rem !important;
-    font-size: 0.82rem !important;
+    padding: 0.95rem 1.8rem !important;
+    font-size: 0.8rem !important;
     width: 90% !important;
     max-width: 340px !important;
   }
 
   .btn-script-accent {
-    font-size: 1.9em !important;
+    font-size: 1.8em !important;
   }
 
   /* Gallery Grid Mobile */
