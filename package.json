@@ -1,8 +1,11 @@
 {
-  "name": "dm-deck-landing",
+  "name": "dm-bathroom-landing",
   "version": "1.0.0",
-  "description": "DM Home Improvement Accessible Decks Landing Page with Google Calendar API Integration",
+  "description": "DM Home Improvement Luxury Bathroom Landing Page",
   "main": "api/book-appointment.js",
+  "scripts": {
+    "build": "echo 'Static build complete'"
+  },
   "dependencies": {
     "googleapis": "^140.0.0"
   }
