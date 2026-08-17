@@ -715,16 +715,34 @@
        ========================================== -->
   <div class="success-modal" id="successModal" aria-hidden="true" role="dialog">
     <div class="modal-backdrop"></div>
-    <div class="modal-card hud-card text-center">
-      <div class="success-icon-wrap">✓</div>
-      <h3 class="success-title">PROJECT QUESTIONNAIRE RECEIVED!</h3>
-      <p class="success-msg">
-        Thank you <strong id="successName">Homeowner</strong>! Your bathroom project profile &amp; <strong class="text-yellow">FREE Design Consultation request</strong> have been submitted.
+    <div class="modal-card hud-card text-center" style="max-width: 540px; padding: 2.25rem 1.75rem;">
+      <div class="success-icon-wrap" style="margin-bottom: 1rem;">✓</div>
+      
+      <h3 class="success-title" style="font-size: 1.45rem; margin-bottom: 0.5rem;">
+        You're One Step Closer to Your New Space
+      </h3>
+      
+      <p class="success-msg" style="font-size: 0.92rem; color: #cbd5e0; line-height: 1.6; margin-bottom: 1.25rem; text-align: left;">
+        Thank you for sharing a little about your project, <strong id="successName" style="color: var(--color-gold);">Homeowner</strong>! A member of the <strong>DM Home Improvement</strong> team will review your information and reach out to discuss your goals, answer initial questions, and determine the best next step for your bathroom project.
       </p>
-      <p class="success-submsg">
-        Our DM Home Improvement design team will contact you on your scheduled appointment date to get started.
-      </p>
-      <button class="btn btn-champagne-pearl btn-block" id="successCloseBtn">GOT IT, THANK YOU!</button>
+
+      <!-- Bathroom Post-Submission Takeaway Box -->
+      <div style="background: rgba(255, 255, 255, 0.06); border-left: 4px solid var(--color-gold); border-radius: 8px; padding: 1.1rem; text-align: left; margin-bottom: 1.5rem;">
+        <h4 style="font-family: var(--font-heading); font-size: 0.92rem; font-weight: 800; color: var(--color-gold); margin-bottom: 0.4rem;">
+          📌 What to have ready:
+        </h4>
+        <p style="font-size: 0.88rem; color: #e2e8f0; line-height: 1.5; margin: 0;">
+          If you have inspiration photos, Pinterest ideas, bathroom measurements, or pictures of your current space, keep them handy. Don't worry if you don't — we'll help guide you through the process.
+        </p>
+      </div>
+
+      <button class="btn btn-champagne-pearl btn-block" id="successCloseBtn" style="padding: 1rem; font-size: 0.92rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; width: 100%;">
+        GOT IT, THANK YOU!
+      </button>
+
+      <div style="margin-top: 1rem; font-size: 0.82rem; color: #94a3b8; text-align: center;">
+        Need immediate assistance? Call us directly: <a href="tel:9105570915" style="color: var(--color-gold); font-weight: 700; text-decoration: underline;">(910) 557-0915</a>
+      </div>
     </div>
   </div>
 
