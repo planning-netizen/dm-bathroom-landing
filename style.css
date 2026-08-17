@@ -1,6 +1,6 @@
 /* ==========================================================================
    DM HOME IMPROVEMENT LLC — LUXURY BATHROOM REMODELING LANDING PAGE
-   REFINED SPECIFICATIONS: 50% LARGER CURSIVE CTA TEXT (FIXED BUTTON HEIGHT)
+   REFINED SPECIFICATIONS: OPTIMIZED MOBILE LAYOUT & RESPONSIVE TYPOGRAPHY
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -205,10 +205,10 @@ button.btn-champagne-pearl {
   transform: translateX(5px);
 }
 
-/* 50% LARGER CURSIVE SCRIPT ACCENT WORDS (WITHOUT ENLARGING BUTTON CONTAINER) */
+/* 50% LARGER CURSIVE SCRIPT ACCENT WORDS */
 .btn-script-accent {
   font-family: var(--font-script) !important;
-  font-size: 2.3em !important; /* 50% larger than base 1.5em */
+  font-size: 2.3em !important;
   font-weight: 400 !important;
   font-style: italic !important;
   text-transform: none !important;
@@ -313,6 +313,7 @@ button.btn-champagne-pearl {
 .hero-luxury {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: flex-end !important;
   justify-content: center !important;
@@ -409,23 +410,6 @@ button.btn-champagne-pearl {
   text-align: center !important;
   display: flex !important;
   justify-content: center !important;
-}
-
-@media (max-width: 1024px) {
-  .hero-luxury-title {
-    font-size: 3.2rem;
-    white-space: normal !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-cursive-accent {
-    font-size: 2.85rem !important;
-  }
-  .hero-luxury-title {
-    font-size: 2.4rem;
-    margin-bottom: 2rem;
-  }
 }
 
 /* --------------------------------------------------------------------------
@@ -599,12 +583,6 @@ button.btn-champagne-pearl {
   border: 1px solid var(--border-hud);
 }
 
-@media (max-width: 768px) {
-  .ba-gallery-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* --------------------------------------------------------------------------
    FREE DESIGN OFFER
    -------------------------------------------------------------------------- */
@@ -727,15 +705,6 @@ button.btn-champagne-pearl {
 .benefit-content p {
   font-size: 0.85rem;
   color: var(--text-muted);
-}
-
-@media (max-width: 900px) {
-  .offer-grid {
-    grid-template-columns: 1fr;
-  }
-  .offer-container-card {
-    padding: 1.5rem;
-  }
 }
 
 /* --------------------------------------------------------------------------
@@ -898,12 +867,6 @@ button.btn-champagne-pearl {
   font-weight: 700;
 }
 
-@media (max-width: 768px) {
-  .final-cta-title {
-    font-size: 2rem;
-  }
-}
-
 /* Footer Styling with 30% Larger Logo */
 .site-footer {
   background-color: #030408;
@@ -962,13 +925,6 @@ button.btn-champagne-pearl {
   font-size: 0.8rem;
 }
 
-@media (max-width: 768px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-}
-
 /* STICKY BOTTOM MOBILE/DESKTOP CTA BAR */
 .sticky-cta-bar {
   position: fixed;
@@ -1013,15 +969,6 @@ button.btn-champagne-pearl {
   font-weight: 800;
   font-size: 1rem;
   color: var(--text-main);
-}
-
-@media (max-width: 640px) {
-  .sticky-bar-text {
-    display: none;
-  }
-  .btn-sticky {
-    width: 100% !important;
-  }
 }
 
 /* --------------------------------------------------------------------------
@@ -1415,15 +1362,6 @@ button.btn-champagne-pearl {
   text-decoration: underline;
 }
 
-@media (max-width: 640px) {
-  .quiz-options-grid, .form-grid {
-    grid-template-columns: 1fr;
-  }
-  .lead-card-container {
-    padding: 2rem 1.25rem;
-  }
-}
-
 /* --------------------------------------------------------------------------
    LIGHTBOX MODAL FOR EXPANDING HIGH-RES PHOTOS
    -------------------------------------------------------------------------- */
@@ -1580,4 +1518,88 @@ button.btn-champagne-pearl {
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES (OPTIMIZED MOBILE VIEW)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .hero-luxury-title {
+    font-size: 3.2rem;
+    white-space: normal !important;
+  }
+  .offer-grid {
+    grid-template-columns: 1fr;
+  }
+  .offer-container-card {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Hero Dynamic Viewport & Spacing */
+  .hero-luxury {
+    min-height: 100vh !important;
+    min-height: 100dvh !important;
+    padding-bottom: 7rem !important; /* Lifts content up from mobile bottom bar */
+  }
+
+  .hero-minimal-container {
+    padding: 1.5rem 0.75rem !important;
+  }
+
+  .hero-cursive-accent {
+    font-size: 2.6rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .hero-luxury-title {
+    font-size: 2.1rem !important;
+    white-space: normal !important;
+    line-height: 1.12 !important;
+    margin-bottom: 1.75rem !important;
+  }
+
+  .btn,
+  .btn-champagne-pearl {
+    padding: 0.95rem 2rem !important;
+    font-size: 0.82rem !important;
+    width: 90% !important;
+    max-width: 340px !important;
+  }
+
+  .btn-script-accent {
+    font-size: 1.9em !important;
+  }
+
+  /* Gallery Grid Mobile */
+  .ba-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Final CTA Title Mobile */
+  .final-cta-title {
+    font-size: 2rem;
+  }
+
+  /* Footer Grid Mobile */
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .sticky-bar-text {
+    display: none;
+  }
+  .btn-sticky {
+    width: 100% !important;
+  }
+  .quiz-options-grid, .form-grid {
+    grid-template-columns: 1fr;
+  }
+  .lead-card-container {
+    padding: 2rem 1.25rem;
+  }
 }

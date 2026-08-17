@@ -205,20 +205,24 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* ------------------------------------------------------------------------
-     5. STICKY CTA BAR SCROLL TRIGGER
+     5. STICKY CTA BAR SCROLL TRIGGER (REFINED FOR MOBILE & DESKTOP)
      ------------------------------------------------------------------------ */
   const stickyCtaBar = document.getElementById('stickyCtaBar');
   const heroSection = document.getElementById('hero');
 
   if (stickyCtaBar && heroSection) {
-    window.addEventListener('scroll', () => {
-      const heroBottom = heroSection.getBoundingClientRect().bottom;
-      if (heroBottom < 0) {
+    function checkStickyBar() {
+      const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+      const heroHeight = heroSection.offsetHeight;
+      if (scrollPosition > heroHeight * 0.65) {
         stickyCtaBar.classList.add('visible');
       } else {
         stickyCtaBar.classList.remove('visible');
       }
-    });
+    }
+
+    window.addEventListener('scroll', checkStickyBar, { passive: true });
+    checkStickyBar(); // Initialize check on load
   }
 
   /* ------------------------------------------------------------------------
