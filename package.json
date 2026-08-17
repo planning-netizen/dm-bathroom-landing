@@ -1,0 +1,9 @@
+{
+  "name": "dm-deck-landing",
+  "version": "1.0.0",
+  "description": "DM Home Improvement Accessible Decks Landing Page with Google Calendar API Integration",
+  "main": "api/book-appointment.js",
+  "dependencies": {
+    "googleapis": "^140.0.0"
+  }
+}
