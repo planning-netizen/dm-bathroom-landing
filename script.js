@@ -292,6 +292,32 @@ document.addEventListener('DOMContentLoaded', () => {
         if (successName) successName.textContent = firstName.value.trim();
         if (successPhone) successPhone.textContent = phone.value.trim();
 
+        // Send instant lead notification email via Resend API
+        const selectedRadio1 = document.querySelector('#quizModal .quiz-step[data-step="1"] .quiz-radio:checked');
+        const selectedRadio2 = document.querySelector('#quizModal .quiz-step[data-step="2"] .quiz-radio:checked');
+        const selectedRadio3 = document.querySelector('#quizModal .quiz-step[data-step="3"] .quiz-radio:checked');
+        const selectedCheckboxes = document.querySelectorAll('#quizModal .quiz-step[data-step="4"] .quiz-checkbox:checked');
+
+        const mattersList = Array.from(selectedCheckboxes).map(cb => cb.value);
+
+        fetch('/api/submit-lead', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            name: firstName.value.trim(),
+            phone: phone.value.trim(),
+            email: email.value.trim(),
+            zip: zip.value.trim(),
+            budget: selectedRadio1 ? selectedRadio1.value : 'N/A',
+            timeline: selectedRadio2 ? selectedRadio2.value : 'N/A',
+            projectType: selectedRadio3 ? selectedRadio3.value : 'N/A',
+            matters: mattersList,
+            pageType: 'Bathroom'
+          })
+        }).then(res => res.json())
+          .then(data => console.log('Bathroom lead notification sent:', data))
+          .catch(err => console.error('Error sending bathroom lead email:', err));
+
         closeQuizModal();
 
         if (successModal) {
